@@ -1,0 +1,1 @@
+This is a game that you can move a catcher around to stop the raindrops from hitting the bottem of the screen.
