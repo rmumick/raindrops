@@ -14,7 +14,7 @@ void draw() {
   for(int i=0; i < drops.length; i++) {
     drops[i].display();
     drops[i].move();
-    drops[i].check();
+    drops[i].check(c1);
   }
   c1.display();
 }

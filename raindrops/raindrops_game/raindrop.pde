@@ -24,7 +24,7 @@ class Rain {
     }
   }
   void check(Catcher c) {
-    if (loc.x <= c.loc.x+d || loc.x >= c.loc.x - d) {
+    if (loc.x <= c.loc.x+c.d || loc.x >= c.loc.x - c.d) {
       loc.y = random(-height, 0);
       loc.x = random(width);
     }
