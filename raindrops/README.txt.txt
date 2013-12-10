@@ -1,1 +1,1 @@
-This is a game that you can move a catcher around to stop raindrops from hitting the bottem of the screen. The score increases when the catcher catches a raindrop. The game is over after a certain number of misses.
+This is a game that you can move a catcher around to stop raindrops from hitting the bottom of the screen. The score increases when the catcher catches a raindrop. The game is over after a certain number of misses.
