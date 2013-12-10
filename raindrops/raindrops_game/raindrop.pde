@@ -32,7 +32,7 @@ class Rain {
   }
   //make the raindrops start over and make the scroe increase when the umbrella touches it 
   void check(Catcher c) {
-    if (dist(loc.x, loc.y, c.loc.x, c.loc.y) < ((130) ) && loc.y>=height-200) {
+    if (dist(loc.x, loc.y, c.loc.x, c.loc.y) < ((130) ) && loc.y>=height-200 && loc.y <= height-130) {
       loc.y = random(-height, 0);
       loc.x = random(width);
       //increase the score when the umbrella catches the raindrop
