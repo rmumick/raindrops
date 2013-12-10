@@ -1,14 +1,16 @@
 class Catcher {
   //declare variables for catcher class
   PVector loc;
-  int d=80;
   PImage umbrella;
+  //scale for the umbrella
   float uScale = .3;
+  //declare score variable 
   int score = 0;
 
   Catcher() {
     imageMode(CENTER);
     umbrella = loadImage("umbrella.png");
+    //resize the umbrella for the appropriate size
     umbrella.resize(int(umbrella.width * uScale), int(umbrella.height * uScale));
 //    loc = new PVector(mouseX, height-(umbrella.height-50));
   }

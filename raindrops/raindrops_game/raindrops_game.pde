@@ -19,18 +19,20 @@ void setup() {
 }
 
 void draw() {
+  //make the picture of clouds the background
   background(clouds);
+  //call the display function for the catcher 
   c1.display();
+  //score is kept at top right of screen
   textSize(72);
   fill(251,255,36);
-  //score is kept at top right of screen
   text("Score " + c1.score, width-400, 90);
   //raindrops come in at intervals
   if (millis() - currentTime >= 5000) {
     index++;
     currentTime = millis();
   }
-  //calls all functions for the raindrops 
+  //calls all functions for the raindrops in the drops array 
   for (int i=0; i < index; i++) {
     drops[i].display();
     drops[i].move();

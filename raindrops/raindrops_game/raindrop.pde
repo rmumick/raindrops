@@ -2,6 +2,7 @@ class Rain {
   //declare variables necessary for the rain class
   PVector loc, vel, acc;
   PImage drop;
+  //scale for resizing the raindrop
   float sc = .05;
 
 
@@ -12,9 +13,10 @@ class Rain {
     vel = new PVector (0, 8);
     acc = new PVector (0, .001);
     drop = loadImage("raindrop.gif");
+    //resize the raindrop to be the appropriate size
     drop.resize(int(drop.width * sc), int(drop.height * sc));
   }
-
+//show the raindrop
   void display() {
     image(drop, loc.x, loc.y);
   }
