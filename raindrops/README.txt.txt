@@ -1,1 +1,1 @@
-This is a game that you can move a catcher around to stop raindrops from hitting the bottom of the screen. The score increases when the catcher catches a raindrop. The game is over after a certain number of misses.
+Raindrops fall from the top and the umbrella must catch the raindrop. The umbrella can be moved by moving the mouse. When the umbrella catches a raindrop, the score increases. 
