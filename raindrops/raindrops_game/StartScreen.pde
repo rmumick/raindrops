@@ -1,10 +1,9 @@
-boolean button;
-PVector loc;
-int w;
-int h;
-Game g1;
-
 class Button {
+  boolean button;
+  PVector loc;
+  int w;
+  int h;
+  Game g1;
 
   Button() {
 
@@ -21,7 +20,7 @@ class Button {
 
       rectMode(CENTER);
       fill(255);
-      rect(loc.x, loc.y, w, h);
+      rect(loc.x,loc.y, w, h);
       textSize(50);
       textAlign(CENTER);
       fill(255, 0, 0);
@@ -30,14 +29,14 @@ class Button {
     if (button) {
       g1.play();
     }
-    if (millis() == 5000) {
-      fill(255);
-      rect(loc.x, loc.y, w, h);
-      textSize(50);
-      textAlign(CENTER);
-      fill(255, 0, 0);
-      text("OVER", width/2, height/2);
-    }
+//    if (millis() == 5000) {
+//      fill(255);
+//      rect(loc.x, loc.y, w, h);
+//      textSize(50);
+//      textAlign(CENTER);
+//      fill(255, 0, 0);
+//      text("OVER", width/2, height/2);
+//    }
   }
   void push() {
     if (mousePressed) {
