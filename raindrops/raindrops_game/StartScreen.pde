@@ -3,6 +3,8 @@ class Button {
   PVector loc;
   int w;
   int h;
+  int oldTime = 0;
+  int index = 0;
   Game g1;
 
   Button() {
@@ -15,28 +17,23 @@ class Button {
   }
 
   void display() {
-    background(0);
+    //    background(0);
     if (!button) {
 
       rectMode(CENTER);
-      fill(255);
-      rect(loc.x,loc.y, w, h);
+      noStroke();
+      fill(251, 255, 36);
+      rect(loc.x, loc.y, w, h, 20);
       textSize(50);
-      textAlign(CENTER);
-      fill(255, 0, 0);
-      text("START", width/2, height/2);
+      textAlign(CENTER, CENTER);
+      fill(162, 163, 167);
+      text("START", width/2, height/2-9);
     }
     if (button) {
       g1.play();
     }
-//    if (millis() == 5000) {
-//      fill(255);
-//      rect(loc.x, loc.y, w, h);
-//      textSize(50);
-//      textAlign(CENTER);
-//      fill(255, 0, 0);
-//      text("OVER", width/2, height/2);
-//    }
+
+
   }
   void push() {
     if (mousePressed) {

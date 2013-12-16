@@ -1,7 +1,8 @@
 class Game {
   //declare variables
-  int index = 1;
   float currentTime = 0;
+  int index = 0;
+  int oldTime = 0;
   //initiate array
   Rain[] drops = new Rain[500];
   //initate one catcher
@@ -41,6 +42,20 @@ class Game {
       drops[i].move();
       drops[i].check(c1);
     }
+  
+
+  if (millis()%8 == 0) {
+    if (index < drops.length) {
+      index += 1;
+    }
+  }
+  if (millis() - oldTime > 15000) {
+    fill(255);
+    rect(b1.loc.x, b1.loc.y, b1.w, b1.h);
+    textSize(50);
+    textAlign(CENTER);
+    fill(255, 0, 0);
+    text("OVER", width/2, height/2);
   }
 }
-
+}
