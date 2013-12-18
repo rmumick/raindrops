@@ -7,6 +7,8 @@ class Game {
   Rain[] drops = new Rain[500];
   //initate one catcher
   Catcher c1;
+  boolean game = true;
+  
 
 
   Game() {
@@ -21,6 +23,7 @@ class Game {
 
 
   void play() {
+    if(game = true) {
     //make the picture of clouds the background
     background(clouds);
     //call the display function for the catcher 
@@ -42,6 +45,7 @@ class Game {
       drops[i].move();
       drops[i].check(c1);
     }
+    }
   
 
   if (millis()%8 == 0) {
@@ -49,13 +53,20 @@ class Game {
       index += 1;
     }
   }
-  if (millis() - oldTime > 15000) {
+  if (millis() - oldTime > 20000) {
+    b1.button = false;
     fill(255);
-    rect(b1.loc.x, b1.loc.y, b1.w, b1.h);
+    rect(b1.loc.x, b1.loc.y, b1.w, b1.h, 20);
     textSize(50);
     textAlign(CENTER);
     fill(255, 0, 0);
-    text("OVER", width/2, height/2);
+    text("OVER", width/2, height/2 + 10);
+    oldTime = millis();
+    fill(255,0,0);
+  
+
+    
   }
-}
+
+  }
 }
