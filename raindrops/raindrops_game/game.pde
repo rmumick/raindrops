@@ -47,22 +47,18 @@ class Game {
     }
     }
   
-
+//game over after a certain amount of time
   if (millis()%8 == 0) {
     if (index < drops.length) {
       index += 1;
     }
   }
   if (millis() - oldTime > 20000) {
+    //make game go away
     b1.button = false;
-    fill(255);
-    rect(b1.loc.x, b1.loc.y, b1.w, b1.h, 20);
-    textSize(50);
-    textAlign(CENTER);
-    fill(255, 0, 0);
-    text("OVER", width/2, height/2 + 10);
+    //restart time so a new game can play
     oldTime = millis();
-    fill(255,0,0);
+
   
 
     

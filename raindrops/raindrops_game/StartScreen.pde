@@ -19,7 +19,7 @@ class Button {
   void display() {
     //    background(0);
     if (!button) {
-
+//draw a start button
       rectMode(CENTER);
       noStroke();
       fill(251, 255, 36);
@@ -28,6 +28,7 @@ class Button {
       textAlign(CENTER, CENTER);
       fill(162, 163, 167);
       text("START", width/2, height/2-9);
+      //display score of previous game under start button
       fill(251, 255, 36);
       text(g1.c1.score, width/2, height-150);
     }
@@ -37,8 +38,10 @@ class Button {
   }
   void push() {
     if (mousePressed) {
+      //start a game if the mouse is pressed inside the bounds of the button
       if (mouseX >= loc.x - w/2 && mouseX <= loc.x + w/2 && mouseY >= loc.y - h/2 && mouseY <= loc.y + h/2) {
         button = true;
+        //score is 0 in beginning of each game 
         g1.c1.score = 0;
       }
     }
