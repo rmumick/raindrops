@@ -43,6 +43,8 @@ class Button {
         button = true;
         //score is 0 in beginning of each game 
         g1.c1.score = 0;
+        g1.c1.uScale -= .0005;
+
       }
     }
   }

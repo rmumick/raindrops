@@ -4,7 +4,7 @@ class Game {
   int index = 0;
   int oldTime = 0;
   //initiate array
-  Rain[] drops = new Rain[500];
+  Rain[] drops = new Rain[20];
   //initate one catcher
   Catcher c1;
   boolean game = true;
@@ -35,10 +35,10 @@ class Game {
     fill(251, 255, 36);
     text("Score " + c1.score, width-300, 90);
     //raindrops come in at intervals
-    if (millis() - currentTime >= 5000) {
-      index++;
-      currentTime = millis();
-    }
+//    if (millis() - currentTime >= 5000) {
+//      index++;
+//      currentTime = millis();
+//    }
     //calls all functions for the raindrops in the drops array 
     for (int i=0; i < index; i++) {
       drops[i].display();
