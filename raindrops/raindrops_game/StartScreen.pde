@@ -4,7 +4,7 @@ class Button {
   int w;
   int h;
   int oldTime = 0;
-  int index = 0;
+
   Game g1;
 
   Button() {
@@ -41,6 +41,8 @@ class Button {
       //start a game if the mouse is pressed inside the bounds of the button
       if (mouseX >= loc.x - w/2 && mouseX <= loc.x + w/2 && mouseY >= loc.y - h/2 && mouseY <= loc.y + h/2) {
         button = true;
+        g1.index = 0;
+        g1.init();
         //score is 0 in beginning of each game 
         g1.c1.score = 0;
         g1.c1.uScale -= .0005;

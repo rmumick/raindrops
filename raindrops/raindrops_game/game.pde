@@ -20,6 +20,12 @@ class Game {
     c1 = new Catcher();
 //    b1 = new Button();
   }
+  
+  void init(){
+     for (int i=0; i < drops.length; i++) {
+      drops[i] = new Rain();
+    }
+  }
 
 
   void play() {
@@ -35,10 +41,18 @@ class Game {
     fill(251, 255, 36);
     text("Score " + c1.score, width-300, 90);
     //raindrops come in at intervals
+<<<<<<< HEAD
 //    if (millis() - currentTime >= 5000) {
 //      index++;
 //      currentTime = millis();
 //    }
+=======
+    if (millis() - currentTime >= 5000) {
+      index++;
+      currentTime = millis();
+    }
+    if(
+>>>>>>> intermittent raindrops
     //calls all functions for the raindrops in the drops array 
     for (int i=0; i < index; i++) {
       drops[i].display();
@@ -48,11 +62,12 @@ class Game {
     }
   
 //game over after a certain amount of time
-  if (millis()%8 == 0) {
-    if (index < drops.length) {
-      index += 1;
-    }
-  }
+//  if (millis()%1000 == 0) {
+//    if (index < drops.length) {
+//      index += 1;
+//      print("new    ");
+//    }
+//  }
   if (millis() - oldTime > 20000) {
     //make game go away
     b1.button = false;
