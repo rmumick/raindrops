@@ -4,6 +4,7 @@ PImage clouds;
 int index = 0;
 int oldTime = 0;
 
+
 void setup() {
   //  size(500,500);
   clouds = loadImage("stormCloud.jpg");

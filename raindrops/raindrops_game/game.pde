@@ -8,6 +8,7 @@ class Game {
   //initate one catcher
   Catcher c1;
   boolean game = true;
+ 
   
 
 
@@ -40,6 +41,8 @@ class Game {
     textSize(72);
     fill(251, 255, 36);
     text("Score " + c1.score, width-300, 90);
+
+
     
     //raindrops come in at intervals
 //    if (millis() - currentTime >= 5000) {
@@ -72,11 +75,21 @@ class Game {
     b1.button = false;
     //restart time so a new game can play
     oldTime = millis();
-
+  }
+  
+//     for (int i=0; i < drops.length; i++) {
+//       if(drops[i].loc.y >= height) {
+//         r1.score -=1;
+//       }
+//     }
+//  for(int i=0; i < drops.length; i++) {
+//    print(drops[i].loc.y >= height);
+//    if(drops[i].loc.y >= height) {
+//      strike -= 1;
+//    }
+//  }
   
 
-    
-  }
 
   }
 }

@@ -28,6 +28,7 @@ class Rain {
     if ( loc.y >= height) {
       loc.y = random(-height, 0);
       loc.x = random(width);
+
     }
   }
   //make the raindrops start over and make the scroe increase when the umbrella touches it 
