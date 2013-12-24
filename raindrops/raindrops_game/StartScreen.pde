@@ -39,6 +39,8 @@ class Button {
   void push() {
     if (mousePressed) {
       //start a game if the mouse is pressed inside the bounds of the button
+      if(!button) {
+        g1.oldTime = millis();
       if (mouseX >= loc.x - w/2 && mouseX <= loc.x + w/2 && mouseY >= loc.y - h/2 && mouseY <= loc.y + h/2) {
         button = true;
         g1.index = 0;
@@ -46,7 +48,7 @@ class Button {
         //score is 0 in beginning of each game 
         g1.c1.score = 0;
         g1.c1.uScale -= .0005;
-
+      }
       }
     }
   }

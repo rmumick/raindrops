@@ -40,19 +40,18 @@ class Game {
     textSize(72);
     fill(251, 255, 36);
     text("Score " + c1.score, width-300, 90);
+    
     //raindrops come in at intervals
-<<<<<<< HEAD
 //    if (millis() - currentTime >= 5000) {
 //      index++;
 //      currentTime = millis();
 //    }
-=======
+
     if (millis() - currentTime >= 5000) {
       index++;
       currentTime = millis();
     }
-    if(
->>>>>>> intermittent raindrops
+
     //calls all functions for the raindrops in the drops array 
     for (int i=0; i < index; i++) {
       drops[i].display();
